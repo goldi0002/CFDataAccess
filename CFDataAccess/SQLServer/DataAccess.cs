@@ -197,7 +197,7 @@ namespace CFDataAccess.SQLServer
             {
                 using (var connection = _connectionManager.GetConnection())
                 {
-                    connection.Open();
+                    _connectionManager.OpenConnection();
                     using (var command = new SqlCommand(storedProcedureName, connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
@@ -215,6 +215,7 @@ namespace CFDataAccess.SQLServer
                             adapter.Fill(dataSet);
                         }
                     }
+                    _connectionManager.CloseConnection();
                 }
                 return dataSet;
             }
