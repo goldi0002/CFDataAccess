@@ -28,6 +28,20 @@ namespace CFDataAccess.SQLServer
                     throw new InvalidOperationException("Could not open a connection to the database.", ex);
                 }
             }
+            else
+            {
+                if(_connection.State == System.Data.ConnectionState.Open)
+                {
+                    try
+                    {
+                        _connection.Close();
+                    }
+                    catch (SqlException ex)
+                    {
+                        throw new InvalidOperationException("Could not open a connection to the database.", ex);
+                    }
+                }
+            }
         }
         public SqlConnection GetConnection() => _connection;
         public void Dispose()

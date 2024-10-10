@@ -1,22 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <PackageId>MyLibrary</PackageId>
-	  <Version>1.0.0</Version>
-	  <Authors>YourName</Authors>
-	  <Company>YourCompany</Company>
-	  <Description>A brief description of your library.</Description>
-	  <PackageTags>tag1;tag2</PackageTags>
-	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
-	  <!-- Or any other license type -->
-	  <RepositoryUrl>https://github.com/your-repo</RepositoryUrl>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>CFDataAccess</PackageId>
+		<Version>1.1.0</Version>
+		<Authors>Gaurav Thakur</Authors>
+		<Company>TheOpenSource</Company>
+		<Description>A data access library for simplified DB operations.</Description>
+		<PackageTags>DataAccess;SQL;ORM;MSSQL</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/goldi0002/CFDataAccess</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/goldi0002/CFDataAccess</PackageProjectUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
-  </ItemGroup>
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+	</ItemGroup>
 
 </Project>
